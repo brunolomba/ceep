@@ -2,7 +2,7 @@
 
 ## 🚀 Tecnologia
 
-Esse projeto foi desenvolvido com a seguinte tecnologia:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Javascript
 - HTML
