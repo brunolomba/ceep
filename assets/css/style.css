@@ -68,17 +68,24 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
 }
 
 .check-button, .delete-button {
-  background-color: #F6F1D1;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   outline: none;
   border-radius: 2px;
   cursor: pointer;
   margin-left: 5px;
+}
+
+.check-button {
+  background-color: #0f0
+}
+
+.delete-button {
+  background-color: #f00;
 }
 
 .task.done .check-button {
@@ -108,7 +115,7 @@ body {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 0;
 }
 
 .task.done .content {

@@ -14,6 +14,7 @@ export const handleNovoItem = (evento) => {
 
     const calendario = document.querySelector('[data-form-date]')
     const data = moment(calendario.value)
+
     const horario = data.format('HH:mm')
 
     const dataFormatada = data.format('DD/MM/YY')
@@ -21,16 +22,21 @@ export const handleNovoItem = (evento) => {
 
     const dados = {valor, dataFormatada, horario, concluida}
 
-    const tarefasAtualizadas = [...tarefas, dados]
+    // Condição para verificar se a tarefa possuí uma data válida
+    if (dados.dataFormatada === 'Invalid date') {
+        alert('Você precisa selecionar uma data válida!')
+        calendario.focus()
+    } else {
+        const tarefasAtualizadas = [...tarefas, dados]
 
-    localStorage.setItem('tarefas', JSON.stringify(tarefasAtualizadas))
+        localStorage.setItem('tarefas', JSON.stringify(tarefasAtualizadas))
     
+        //corrigir valor do input
+        input.value = ''
 
-    //corrigir valor do input
-    input.value = ''
-
-    //Carrega as tarefas
-    carregaTarefa()
+        //Carrega as tarefas
+        carregaTarefa()
+    }
 }
 
 //função de criar tarefa

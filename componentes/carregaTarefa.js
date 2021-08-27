@@ -10,6 +10,11 @@ export const carregaTarefa = () => {
         lista.innerHTML = ''
         const datasUnicas = removeDatasRepetidas(tarefaCadastradas)
 
+        // condição para não mostrar data inválidas
+        // if (datasUnicas.indexOf('Invalid date') != -1) {
+        //     datasUnicas.pop()
+        // }
+
         ordenaDatas(datasUnicas)
 
         datasUnicas.forEach((dia) => {
